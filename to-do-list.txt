@@ -2,3 +2,24 @@
 -install api
     php artisan install:api
 -add HasApiToken in your Models\User 
+-Make AuthController
+    -make public function register
+        -validate request register user
+        -create token 
+        -make route register in api
+        -test api with postman or thunder client
+        -if internall server error cek your laragon
+        -add error code
+        -add try and catch
+        -add exception and response
+    -make public function login
+        -copy register validate and delete name
+        -costomize validate for email and password
+        -make route for login
+        -handle condition if email wrong
+        -test api with thunder
+    -make public function for logout
+        -get user token then delete
+        -add response message
+        -make route for logout,add middleware
+        -test api, go to bearer in thunder paste token there
