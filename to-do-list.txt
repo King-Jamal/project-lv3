@@ -1,0 +1,4 @@
+-git init
+-install api
+    php artisan install:api
+-add HasApiToken in your Models\User 
