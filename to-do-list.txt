@@ -23,3 +23,13 @@
         -add response message
         -make route for logout,add middleware
         -test api, go to bearer in thunder paste token there
+-Make post 
+    -create post model and make migration
+    -make post controller
+    -create new table for post
+    -migrate table
+    -add protected table and fillable all 
+    -make resources route in api.php
+    -make public function in POst controller
+    -make post resources
+    -change return format in resource
