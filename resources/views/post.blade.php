@@ -8,7 +8,6 @@
   
     <div class="text-base text-gray-500"><a href="#">{{ $post->author }}</a>  |{{ $post->created_at->diffForHumans() }}</div>
     <p class="my-4 font-light">{{$post->description }}</p>
-    {{-- <a href="/" class="font-medium text-red-500 hover:underline"> Delete Post</a> --}}
     <div class="flex justify-between">
       <a href="{{ route('posts.index') }}" class="font-medium text-blue-500 hover:underline">&laquo; Back to post</a>
 
