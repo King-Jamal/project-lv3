@@ -1,9 +1,6 @@
 <x-layout>
     <x-slot:title>{{ $title }}</x-slot:title>
-    <div class='flex gap-3'>
-      <h1 class='font-bold text-md'>Do u want to create a new post?</h1>
-      <a href="{{ route('posts.create') }}" class="font-medium text-blue-500 hover:underline">Create a Post</a>
-    </div>
+    
     @foreach ($posts as $post )
     <article class="max-w-screen-md py-8 border-b border-gray-400">
       <a href="/posts/{{ $post->id }}">

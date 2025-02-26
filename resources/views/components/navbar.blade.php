@@ -9,7 +9,7 @@
             <div class="flex items-baseline ml-10 space-x-4">
               <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
               <x-nav-link href="/home" :active="request()->is('home')">Home</x-nav-link>
-              <x-nav-link href="/posts" :active="request()->is('posts')">Posts</x-nav-link>
+              <x-nav-link href="/posts" :active="request()->is('posts')">Books</x-nav-link>
             </div>
           </div>
         </div>
@@ -66,7 +66,7 @@
       <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
         <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
         <x-nav-link href="/home" :active="request()->is('home')">Home</x-nav-link>
-        <x-nav-link href="/posts" :active="request()->is('posts')">Posts</x-nav-link>
+        <x-nav-link href="/posts" :active="request()->is('posts')">Books</x-nav-link>
         
       </div>
       <div class="pt-4 pb-3 border-t border-gray-700">

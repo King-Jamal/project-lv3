@@ -9,7 +9,7 @@
     <div class="text-base text-gray-500"><a href="#">{{ $post->author }}</a>  |{{ $post->created_at->diffForHumans() }}</div>
     <p class="my-4 font-light">{{$post->description }}</p>
     <div class="flex justify-between">
-      <a href="{{ route('posts.index') }}" class="font-medium text-blue-500 hover:underline">&laquo; Back to post</a>
+      <a href="{{ route('posts.index') }}" class="font-medium text-blue-500 hover:underline">&laquo; Back </a>
 
       <div class="flex gap-3 space-x-2">
         <a href="{{ route('posts.edit', $post->id) }}" class='block font-medium text-green-500 hover:underline'>Edit</a>

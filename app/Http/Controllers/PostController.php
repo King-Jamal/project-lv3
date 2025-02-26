@@ -10,13 +10,13 @@ class PostController extends Controller
     public function index(){
         $posts=Post::orderBy('id','desc')->get();
         if($posts->count()>0){
-            return view('posts',['title'=>'All Posts','posts'=>$posts]);
+            return view('posts',['title'=>'All Books','posts'=>$posts]);
         }else{
-            return view('posts',['title'=>'No Posts Available','posts'=>$posts]);
+            return view('posts',['title'=>'No Book Available','posts'=>$posts]);
         }
     }
     public function create(){
-        return view('create',['title'=>'Create Post']);
+        return view('create',['title'=>'Create a Book']);
     }
     public function store(Request $request){
         $request->validate([
@@ -36,7 +36,7 @@ class PostController extends Controller
        if($create){
         return redirect()->route('posts.index')->with('success','post has been created successfully');
        }
-       return redirect()->route('posts.store',['title'=>'Create Post']);
+       return redirect()->route('posts.store',['title'=>'Create a Book']);
         
        
     }
@@ -48,10 +48,11 @@ class PostController extends Controller
             ],404);
 
         }else{
-            return view('post',['title'=>'Single Post','post'=>$post]);
+            return view('post',['title'=>'Detail Book','post'=>$post]);
 
         }
     }
+    
     public function update(Request $request, $id){
         $post=Post::find($id); 
         $request->validate([
@@ -71,7 +72,7 @@ class PostController extends Controller
        if($updated){
         return redirect()->route('posts.index');
        }
-       return redirect()->route('posts.edit',['title'=>'Edit Post','post'=>$post]);
+       return redirect()->route('posts.edit',['title'=>'Edit Book','post'=>$post]);
        
 
     }
@@ -86,6 +87,6 @@ class PostController extends Controller
     }
     public function edit( $id){
         $post=Post::find($id);
-        return view('edit',['title'=>'Edit Post','post'=>$post]);
+        return view('edit',['title'=>'Edit Book','post'=>$post]);
     }
 }

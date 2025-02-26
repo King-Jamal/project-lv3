@@ -10,7 +10,6 @@ Route::get('/posts/{id}', [PostController::class,'show']);
 
 Route::post('/posts/store', [PostController::class,'store']);
 Route::get('/posts/create', [PostController::class,'create']);
-
 Route::delete('/posts/{id}/delete', [PostController::class,'destroy']);
 Route::put('/posts/{id}/update', [PostController::class,'update']);
 
